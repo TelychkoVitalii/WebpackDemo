@@ -14,6 +14,12 @@ const productionConfig = merge([
   parts.purifyCSS({
     paths: glob.sync(`${PATHS.app}/**/*.js`, { nodir: true }),
   }),
+  parts.loadImages({
+    options: {
+      limit: 15000,
+      name: '[name].[ext]',
+    },
+  }),
 ]);
 
 const developmentConfig = merge([
@@ -23,6 +29,7 @@ const developmentConfig = merge([
     port: process.env.PORT,
   }),
   parts.loadCSS(),
+  parts.loadImages(),
 ]);
 
 const commonConfig = merge([
@@ -42,9 +49,16 @@ const commonConfig = merge([
   },
   parts.lintJavaScript({ include: PATHS.app }),
   parts.lintCSS({ include: PATHS.app }),
+  parts.loadFonts({
+    options: {
+      name: '[name].[ext]',
+    },
+  }),
+  parts.loadJavaScript({ include: PATHS.app }),
 ]);
 
 module.exports = (env) => {
+  process.env.BABEL_ENV = env;
   if (env === 'production') {
     return merge(commonConfig, productionConfig);
   }

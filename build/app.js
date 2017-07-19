@@ -80,24 +80,17 @@ document.body.appendChild(Object(__WEBPACK_IMPORTED_MODULE_0__component__["a" /*
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__main_css__ = __webpack_require__(2);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__main_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__main_css__);
-
+// import styles from './main.css';
 
 /* harmony default export */ __webpack_exports__["a"] = ((text = 'Beautiful World - Hello World') => {
   const element = document.createElement('button');
-  element.className = __WEBPACK_IMPORTED_MODULE_0__main_css___default.a.buttonItem;
+  // element.className = styles.buttonItem;
+  element.className = 'fa fa-hand-spock-o fa-1g';
   element.innerHTML = text;
 
   return element ;
 });
 
-
-/***/ }),
-/* 2 */
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
 
 /***/ })
 /******/ ]);
