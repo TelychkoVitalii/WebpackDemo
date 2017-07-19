@@ -74,18 +74,30 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 document.body.appendChild(Object(__WEBPACK_IMPORTED_MODULE_0__component__["a" /* default */])());
 
+
 /***/ }),
 /* 1 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony default export */ __webpack_exports__["a"] = ((text = 'Fuck You Man') => {
-    const element = document.createElement('div');
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__main_css__ = __webpack_require__(2);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__main_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__main_css__);
 
-    element.innerHTML = text;
 
-    return element;
+/* harmony default export */ __webpack_exports__["a"] = ((text = 'Beautiful World - Hello World') => {
+  const element = document.createElement('button');
+  element.className = __WEBPACK_IMPORTED_MODULE_0__main_css___default.a.buttonItem;
+  element.innerHTML = text;
+
+  return element ;
 });
+
+
+/***/ }),
+/* 2 */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
 
 /***/ })
 /******/ ]);
